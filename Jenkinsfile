@@ -6,7 +6,6 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                label 'qingcloud001'
                 docker {
                     image 'registry.cn-hangzhou.aliyuncs.com/louplus-linux/python:2-alpine'
                 }
@@ -17,7 +16,6 @@ pipeline {
         }
         stage('Test') {
             agent {
-                label 'qingcloud001'
                 docker {
                     image 'registry.cn-hangzhou.aliyuncs.com/louplus-linux/qnib-pytest'
                 }
@@ -33,7 +31,6 @@ pipeline {
         }
         stage('Deliver') {
             agent {
-                label 'qingcloud001'
                 docker {
                     image 'registry.cn-hangzhou.aliyuncs.com/louplus-linux/cdrx-pyinstaller-linux:python2'
                 }
