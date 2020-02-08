@@ -1,5 +1,8 @@
 pipeline {
-    agent none
+    //agent none
+    agent {
+        label 'qingcloud001'
+    }
     stages {
         stage('Build') {
             agent {
