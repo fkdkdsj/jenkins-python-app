@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                docker {
+                jenkins-agent {
                     image 'registry.cn-hangzhou.aliyuncs.com/louplus-linux/python:2-alpine'
                 }
             }
